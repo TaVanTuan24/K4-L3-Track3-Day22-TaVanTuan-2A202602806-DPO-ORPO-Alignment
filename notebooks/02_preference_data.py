@@ -57,16 +57,32 @@ print(f"train={len(train_ds)}  eval={len(eval_ds)}  (no prompt overlap)")
 print(train_ds[0])
 
 # %% [markdown]
+# ### 1b. Đọc 3 cặp mẫu thật (rubric yêu cầu)
+#
+# Trước khi tin vào nhãn của bộ dữ liệu, hãy tự chấm bằng mắt: câu `chosen` có thật sự
+# **tốt hơn**, hay chỉ **dài hơn**? Ghi nhận xét của bạn vào `REFLECTION.md` §1.
+# (Khoảng 1% câu `chosen` trong bộ này lẫn tiếng Anh hoặc mất dấu; một số câu hỏi là bài code.)
+
+# %%
+def n_tokens(text: str) -> int:
+    """Số token của một đoạn text theo tokenizer của mô hình gốc."""
+    return len(tokenizer(text, add_special_tokens=False)["input_ids"])
+
+
+for i in range(3):
+    row = train_ds[i]
+    prompt, chosen, rejected = row["prompt"][0]["content"], row["chosen"][0]["content"], row["rejected"][0]["content"]
+    print(f"\n{'═' * 78}\nCẶP {i + 1}\n[prompt] {prompt[:300]}")
+    print(f"\n[chosen]  ({n_tokens(chosen)} tok · {len(chosen)} ký tự)\n{chosen[:700]}")
+    print(f"\n[rejected] ({n_tokens(rejected)} tok · {len(rejected)} ký tự)\n{rejected[:700]}")
+
+# %% [markdown]
 # ## 2. Thiên vị độ dài
 #
 # Nếu phần lớn `chosen` dài hơn `rejected`, DPO có thể học "viết dài hơn" thay vì
 # "trả lời tốt hơn". Ghi con số này vào REFLECTION và so với độ dài đầu ra ở NB4.
 
 # %%
-def n_tokens(text: str) -> int:
-    return len(tokenizer(text, add_special_tokens=False)["input_ids"])
-
-
 stats = D.length_stats(list(train_ds), count=n_tokens)
 print(f"chosen median {stats['chosen_median']:.0f} tok · rejected median {stats['rejected_median']:.0f} tok")
 print(f"chosen longer in {stats['chosen_longer_frac']:.1%} of pairs")

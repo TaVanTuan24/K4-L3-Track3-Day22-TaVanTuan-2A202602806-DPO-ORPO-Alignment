@@ -58,9 +58,16 @@ print(f"sum log p = {total.item():.3f}   mean log p = {mean.item():.3f}")
 
 # %%
 def my_dpo_loss(pc, pr, rc, rr, beta=0.1):
-    """pc/pr: policy log-prob chosen/rejected; rc/rr: reference. Trả về loss trung bình."""
-    # TODO: viết bằng torch.nn.functional.logsigmoid
-    return None
+    """pc/pr: policy log-prob chosen/rejected; rc/rr: reference. Trả về loss trung bình.
+
+    L = -mean( logsigmoid( β · [ (pc − rc) − (pr − rr) ] ) )
+
+    `beta * (pc - rc)` là reward ngầm định của câu được chọn, `beta * (pr - rr)` là
+    của câu bị loại; loss chỉ phụ thuộc *hiệu* của hai reward đó (margin).
+    """
+    chosen_reward = beta * (torch.as_tensor(pc) - torch.as_tensor(rc))
+    rejected_reward = beta * (torch.as_tensor(pr) - torch.as_tensor(rr))
+    return -torch.nn.functional.logsigmoid(chosen_reward - rejected_reward).mean()
 
 
 # %%
@@ -73,6 +80,44 @@ if mine is None:
 else:
     assert torch.allclose(torch.as_tensor(mine), ref_loss, atol=1e-6), (mine, ref_loss)
     print(f"✓ Khớp tham chiếu: {ref_loss.item():.4f}")
+
+# %% [markdown]
+# ### 2b. Kiểm tra đầy đủ `my_dpo_loss`
+#
+# Một hàm loss dùng được phải thoả cả bốn điều, không chỉ khớp một bộ số:
+# (a) khớp công thức đóng trên nhiều bộ ngẫu nhiên và không sinh NaN/Inf;
+# (b) bằng `log 2` khi policy trùng reference; (c) gradient hữu hạn và **truyền được**
+# ngược về log-prob của policy (không bị `detach()` làm đứt);
+# (d) dấu gradient đúng: đẩy `chosen` lên thì loss giảm, đẩy `rejected` lên thì loss tăng.
+
+# %%
+# (a) Khớp công thức đóng trên 200 bộ số ngẫu nhiên, không NaN/Inf.
+torch.manual_seed(0)
+for _ in range(200):
+    a, b = torch.randn(4) * 10 - 20, torch.randn(4) * 10 - 20
+    c, d = torch.randn(4) * 10 - 20, torch.randn(4) * 10 - 20
+    ref_i, _, _ = M.dpo_loss(a, b, c, d, beta=0.3)
+    got_i = my_dpo_loss(a, b, c, d, beta=0.3)
+    assert torch.isfinite(got_i) and not torch.isnan(got_i), f"NaN/Inf: {got_i}"
+    assert torch.allclose(got_i, ref_i, atol=1e-5), (got_i, ref_i)
+print("✓ (a) khớp công thức đóng trên 200 bộ ngẫu nhiên, không NaN/Inf")
+
+# (b) policy = reference ⇒ margin = 0 ⇒ loss = log 2.
+same_c = torch.randn(6) * 8 - 25
+same_r = same_c - 2
+loss_same = my_dpo_loss(same_c, same_r, same_c, same_r)
+assert torch.allclose(loss_same, torch.tensor(math.log(2)), atol=1e-6), loss_same.item()
+print(f"✓ (b) policy = reference ⇒ loss {loss_same.item():.6f} = log 2")
+
+# (c) + (d) gradient hữu hạn, chảy về policy, và có dấu đúng.
+pc_g = torch.tensor([-12.0], requires_grad=True)
+pr_g = torch.tensor([-15.0], requires_grad=True)
+loss_g = my_dpo_loss(pc_g, pr_g, torch.tensor([-13.0]), torch.tensor([-14.0]), beta=0.1)
+loss_g.backward()
+assert pc_g.grad is not None and pr_g.grad is not None, "gradient không truyền về policy log-prob"
+assert torch.isfinite(pc_g.grad).all() and torch.isfinite(pr_g.grad).all(), "gradient không hữu hạn"
+assert pc_g.grad.item() < 0 < pr_g.grad.item(), (pc_g.grad.item(), pr_g.grad.item())
+print(f"✓ (c) gradient về policy hữu hạn: dL/dpc = {pc_g.grad.item():+.5f} < 0 < dL/dpr = {pr_g.grad.item():+.5f}")
 
 # %% [markdown]
 # ## 3. Bước 0: mô hình đang học (policy) = reference ⇒ loss = log 2
@@ -148,3 +193,43 @@ print(f"ORPO  {M.orpo_loss(avg_c, avg_r, -avg_c).item():.4f}")
 # **Câu hỏi cho REFLECTION §3:** tổng log-prob của câu dài luôn âm hơn câu ngắn.
 # Vì sao điều đó khiến DPO gốc dễ thiên vị độ dài, và SimPO/ORPO xử lý bằng cách nào?
 # Gợi ý: NB2 in ra tỉ lệ cặp có chosen dài hơn rejected trong dữ liệu tiếng Việt.
+
+# %% [markdown]
+# ## 7. Trả lời hai câu hỏi của NB0
+#
+# ### 7.1 Vì sao margin tăng được trong khi log-xác suất của câu `chosen` giảm?
+#
+# Loss chỉ phụ thuộc **hiệu** hai reward ngầm định:
+# `L = −logsigmoid(β·[(pc − rc) − (pr − rr)])`. Vì vậy đạo hàm theo margin là
+# `−sigmoid(−β·margin)`: mục tiêu **không** có thành phần nào thưởng cho việc nâng
+# `log π(chosen)` lên một cách tuyệt đối. Nó chỉ cần margin dương, và margin có thể
+# tăng bằng hai con đường hoàn toàn khác nhau. Kết quả thật ở §5:
+#
+# | Kịch bản | `chosen` | `rejected` | loss |
+# |---|---:|---:|---:|
+# | A: chosen ↑, rejected ↓ | **+1.0** | −1.0 | 0.127 |
+# | B: chosen ↓, rejected ↓↓ | **−3.0** | −5.0 | 0.127 |
+#
+# Hai kịch bản cho **cùng một loss 0.127**, dù ở B xác suất của câu được chọn *giảm*.
+# DPO hoàn toàn không phân biệt được A với B. Trong thực tế đường `rejected` thường
+# rơi nhanh hơn vì gradient âm tác động lên mọi token của câu bị loại, nên câu `chosen`
+# có thể bị kéo xuống theo — hiện tượng **dịch chuyển xác suất** (likelihood displacement,
+# Razin et al. 2024). Đó là lý do bắt buộc phải vẽ **riêng** `rewards/chosen`, chứ chỉ
+# nhìn margin tăng là không đủ để kết luận mô hình tốt lên. RPO sửa bằng cách cộng thêm
+# NLL của chosen: ở §5, RPO cho A = 2.027 < B = 2.427, tức nó **phạt** đúng kịch bản B.
+#
+# ### 7.2 Vì sao DPO gốc thiên vị độ dài, và SimPO/ORPO sửa thế nào?
+#
+# `log π(y|x) = Σ_t log π(y_t | x, y_<t)` là một **tổng** theo token, nên mỗi token thêm
+# vào đóng góp một số hạng âm. Câu dài hơn vì thế luôn có tổng log-prob âm hơn câu ngắn,
+# bất kể chất lượng. DPO so *tổng* của chosen với *tổng* của rejected, nên nếu trong dữ
+# liệu `chosen` thường dài hơn `rejected` (NB2 đo tỉ lệ này), mô hình học được quy tắc
+# "viết dài thì được điểm" thay vì "viết hay hơn". Cách sửa là **chuẩn hoá theo độ dài**:
+# chia log-ratio cho số token hoàn thành để margin trở thành *trung bình trên token*.
+# IPO và SimPO làm đúng vậy; SimPO còn bỏ hẳn mô hình tham chiếu và thêm margin γ, còn
+# ORPO dùng log-odds của log-prob trung bình cộng với NLL của chosen. Ở §6, cùng một cặp
+# (chosen 40 token, rejected 120 token) cho DPO **0.5130** trên tổng chưa chuẩn hoá, còn
+# các biến thể chuẩn hoá cho các giá trị khác hẳn về thang đo: SimPO 1.1256, ORPO 1.2783.
+# Vì `β` chỉ có ý nghĩa nhất quán khi margin được chuẩn hoá, cùng một `β` sẽ tác động
+# rất khác nhau lên câu ngắn và câu dài nếu ta dùng DPO gốc.
+
