@@ -1,0 +1,48 @@
+{
+  "source": "/content/K4-L3-Track3-Day22-TaVanTuan-2A202602806-DPO-ORPO-Alignment/models/sft-merged",
+  "backup": "/content/drive/MyDrive/Day22-DPO-ORPO-TaVanTuan/recovery-models/sft-merged",
+  "verified_sha256": true,
+  "seconds": 388.8121383190155,
+  "files": [
+    {
+      "file": "chat_template.jinja",
+      "bytes": 4040,
+      "sha256": "40c21f34cf67d8c760ef72f8ad3ae5afad514299d4b06e91dd9a8d705af7b541"
+    },
+    {
+      "file": "config.json",
+      "bytes": 1804,
+      "sha256": "93805895bae1690606f33d211ec52fa19bbcc4b9dab4cb348518bea4fcccb1f1"
+    },
+    {
+      "file": "generation_config.json",
+      "bytes": 211,
+      "sha256": "c6476e075e1ead08f644d4660c609fab8f18fd2b9c31c99e6f05089ce71bfe22"
+    },
+    {
+      "file": "model-00001-of-00002.safetensors",
+      "bytes": 4967215360,
+      "sha256": "525bc350d5069957dbe7dc0c12aa50080d62aa6d82a94c96329869c0e6c823ed"
+    },
+    {
+      "file": "model-00002-of-00002.safetensors",
+      "bytes": 3077766632,
+      "sha256": "8ac1b035f4c72793138f4bc9d63c7dcf49413f347d5b4f9bdb8e034759af960d"
+    },
+    {
+      "file": "model.safetensors.index.json",
+      "bytes": 32855,
+      "sha256": "06b3d5319b6d76d1a4a2433419180016cfd54ed62d086a5e6567a809f8c82634"
+    },
+    {
+      "file": "tokenizer.json",
+      "bytes": 11422924,
+      "sha256": "476870a1f2fb6f6a2759a6ede2383bf9d5d738f17844563b65c91965b722ae09"
+    },
+    {
+      "file": "tokenizer_config.json",
+      "bytes": 9353,
+      "sha256": "e84ea7cf9d04773375265b3e56340f8121deabcafc81295507846cd9bcc0fe99"
+    }
+  ]
+}

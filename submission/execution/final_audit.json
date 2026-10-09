@@ -1,0 +1,19 @@
+{
+  "train_pairs": 800,
+  "eval_pairs": 100,
+  "disjoint": true,
+  "reference_correct": true,
+  "judge_summary_recomputed_exactly": true,
+  "outputs_sha256": "84362ad9626cf8ba998d7608cb6698450976a8c5af5121bebd546e44a8410ce1",
+  "heldout_judged": 50,
+  "rubric_and_tests_unchanged": true,
+  "reflection_words": {
+    "3": 463,
+    "6": 495
+  },
+  "reflection_code_blocks": 2,
+  "test_exit_code": 0,
+  "verify_exit_code": 0,
+  "original_pipeline_exit_code": null,
+  "pipeline_completion_evidence": "32 executed code cells across NB0-NB4, zero error outputs; original pipeline exit file absent from stage snapshot"
+}

@@ -1,0 +1,7 @@
+{
+  "credential_helper_configured": false,
+  "git_credentials_file_present": false,
+  "netrc_present": false,
+  "github_cli_installed": true,
+  "github_cli_authenticated": false
+}

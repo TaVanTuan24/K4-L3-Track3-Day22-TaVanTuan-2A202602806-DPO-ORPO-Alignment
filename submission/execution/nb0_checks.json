@@ -1,0 +1,7 @@
+{
+  "reference_match": true,
+  "loss_at_init": 0.6931471824645996,
+  "finite_gradients": true,
+  "loss_example": 0.6981388330459595,
+  "execution": "Colab terminal"
+}

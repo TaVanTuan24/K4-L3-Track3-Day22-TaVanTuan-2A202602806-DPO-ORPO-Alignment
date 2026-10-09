@@ -1,0 +1,9 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "scripts/build_colab.py"
+  ],
+  "exit_code": 0,
+  "seconds": 0.27475523948669434,
+  "utc": "2026-10-08T17:17:26.364314+00:00"
+}
