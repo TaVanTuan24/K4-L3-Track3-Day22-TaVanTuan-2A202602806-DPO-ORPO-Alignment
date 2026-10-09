@@ -113,6 +113,8 @@ def length_stats(rows: list[dict], count: Callable[[str], int] = len) -> dict[st
     longer = sum(c > r for c, r in zip(chosen, rejected))
     return {
         "n": len(rows),
+        "chosen_mean": float(statistics.mean(chosen)),
+        "rejected_mean": float(statistics.mean(rejected)),
         "chosen_median": float(statistics.median(chosen)),
         "rejected_median": float(statistics.median(rejected)),
         "chosen_longer_frac": longer / len(rows),

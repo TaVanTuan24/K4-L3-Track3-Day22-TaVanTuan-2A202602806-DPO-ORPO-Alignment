@@ -1,0 +1,27 @@
+{
+  "runtime": "Colab CPU",
+  "transformers_version": "5.17.0",
+  "source": "original NB2 splits and SFT tokenizer; no resplit or retraining",
+  "split_sha256": {
+    "train": "3f01b58d2b85b5ed6c296b053376419bcd245e98ce045b1cc762ce314fa41ef8",
+    "eval": "54e58e6033b838db373ddd0737d3ae99c606fd3932391b751cddf236149bcf26"
+  },
+  "tokenizer_sha256": "476870a1f2fb6f6a2759a6ede2383bf9d5d738f17844563b65c91965b722ae09",
+  "train": {
+    "n": 800,
+    "chosen_mean": 205.64625,
+    "rejected_mean": 170.22375,
+    "chosen_median": 94.0,
+    "rejected_median": 86.0,
+    "chosen_longer_frac": 0.65875
+  },
+  "eval": {
+    "n": 100,
+    "chosen_mean": 221.8,
+    "rejected_mean": 176.54,
+    "chosen_median": 102.5,
+    "rejected_median": 88.0,
+    "chosen_longer_frac": 0.56
+  },
+  "train_eval_disjoint": true
+}

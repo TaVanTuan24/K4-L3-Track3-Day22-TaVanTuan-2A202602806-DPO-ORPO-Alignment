@@ -1,0 +1,210 @@
+{
+  "status": "verified",
+  "seconds": 557.8319609165192,
+  "files": [
+    {
+      "source": "/content/drive/MyDrive/Day22-DPO-ORPO-TaVanTuan/recovery-models/sft-merged/chat_template.jinja",
+      "target": "/content/K4-L3-Track3-Day22-TaVanTuan-2A202602806-DPO-ORPO-Alignment/models/sft-merged/chat_template.jinja",
+      "bytes": 4040,
+      "sha256": "40c21f34cf67d8c760ef72f8ad3ae5afad514299d4b06e91dd9a8d705af7b541"
+    },
+    {
+      "source": "/content/drive/MyDrive/Day22-DPO-ORPO-TaVanTuan/recovery-models/sft-merged/tokenizer.json",
+      "target": "/content/K4-L3-Track3-Day22-TaVanTuan-2A202602806-DPO-ORPO-Alignment/models/sft-merged/tokenizer.json",
+      "bytes": 11422924,
+      "sha256": "476870a1f2fb6f6a2759a6ede2383bf9d5d738f17844563b65c91965b722ae09"
+    },
+    {
+      "source": "/content/drive/MyDrive/Day22-DPO-ORPO-TaVanTuan/recovery-models/sft-merged/generation_config.json",
+      "target": "/content/K4-L3-Track3-Day22-TaVanTuan-2A202602806-DPO-ORPO-Alignment/models/sft-merged/generation_config.json",
+      "bytes": 211,
+      "sha256": "c6476e075e1ead08f644d4660c609fab8f18fd2b9c31c99e6f05089ce71bfe22"
+    },
+    {
+      "source": "/content/drive/MyDrive/Day22-DPO-ORPO-TaVanTuan/recovery-models/sft-merged/config.json",
+      "target": "/content/K4-L3-Track3-Day22-TaVanTuan-2A202602806-DPO-ORPO-Alignment/models/sft-merged/config.json",
+      "bytes": 1804,
+      "sha256": "93805895bae1690606f33d211ec52fa19bbcc4b9dab4cb348518bea4fcccb1f1"
+    },
+    {
+      "source": "/content/drive/MyDrive/Day22-DPO-ORPO-TaVanTuan/recovery-models/sft-merged/tokenizer_config.json",
+      "target": "/content/K4-L3-Track3-Day22-TaVanTuan-2A202602806-DPO-ORPO-Alignment/models/sft-merged/tokenizer_config.json",
+      "bytes": 9353,
+      "sha256": "e84ea7cf9d04773375265b3e56340f8121deabcafc81295507846cd9bcc0fe99"
+    },
+    {
+      "source": "/content/drive/MyDrive/Day22-DPO-ORPO-TaVanTuan/recovery-models/sft-merged/model.safetensors.index.json",
+      "target": "/content/K4-L3-Track3-Day22-TaVanTuan-2A202602806-DPO-ORPO-Alignment/models/sft-merged/model.safetensors.index.json",
+      "bytes": 32855,
+      "sha256": "06b3d5319b6d76d1a4a2433419180016cfd54ed62d086a5e6567a809f8c82634"
+    },
+    {
+      "source": "/content/drive/MyDrive/Day22-DPO-ORPO-TaVanTuan/recovery-models/sft-merged/model-00001-of-00002.safetensors",
+      "target": "/content/K4-L3-Track3-Day22-TaVanTuan-2A202602806-DPO-ORPO-Alignment/models/sft-merged/model-00001-of-00002.safetensors",
+      "bytes": 4967215360,
+      "sha256": "525bc350d5069957dbe7dc0c12aa50080d62aa6d82a94c96329869c0e6c823ed"
+    },
+    {
+      "source": "/content/drive/MyDrive/Day22-DPO-ORPO-TaVanTuan/recovery-models/sft-merged/model-00002-of-00002.safetensors",
+      "target": "/content/K4-L3-Track3-Day22-TaVanTuan-2A202602806-DPO-ORPO-Alignment/models/sft-merged/model-00002-of-00002.safetensors",
+      "bytes": 3077766632,
+      "sha256": "8ac1b035f4c72793138f4bc9d63c7dcf49413f347d5b4f9bdb8e034759af960d"
+    },
+    {
+      "source": "/content/drive/MyDrive/Day22-DPO-ORPO-TaVanTuan/recovery-models/sft-merged/.cache/huggingface/.gitignore",
+      "target": "/content/K4-L3-Track3-Day22-TaVanTuan-2A202602806-DPO-ORPO-Alignment/models/sft-merged/.cache/huggingface/.gitignore",
+      "bytes": 1,
+      "sha256": "684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1"
+    },
+    {
+      "source": "/content/drive/MyDrive/Day22-DPO-ORPO-TaVanTuan/recovery-models/sft-merged/.cache/huggingface/CACHEDIR.TAG",
+      "target": "/content/K4-L3-Track3-Day22-TaVanTuan-2A202602806-DPO-ORPO-Alignment/models/sft-merged/.cache/huggingface/CACHEDIR.TAG",
+      "bytes": 191,
+      "sha256": "f6572428f6d5e1575e73a1502895a8731f10757dfbb634909c6e154b849af91d"
+    },
+    {
+      "source": "/content/drive/MyDrive/Day22-DPO-ORPO-TaVanTuan/recovery-models/sft-merged/.cache/huggingface/trees/992063681dc2f7de4ee976110199552935cad284.json",
+      "target": "/content/K4-L3-Track3-Day22-TaVanTuan-2A202602806-DPO-ORPO-Alignment/models/sft-merged/.cache/huggingface/trees/992063681dc2f7de4ee976110199552935cad284.json",
+      "bytes": 2217,
+      "sha256": "0ad1f0128eac338f53eec1491ba10e45d01ca31e05734da0e573ef9c97138b5e"
+    },
+    {
+      "source": "/content/drive/MyDrive/Day22-DPO-ORPO-TaVanTuan/recovery-models/sft-merged/.cache/huggingface/download/model.safetensors.index.json.lock",
+      "target": "/content/K4-L3-Track3-Day22-TaVanTuan-2A202602806-DPO-ORPO-Alignment/models/sft-merged/.cache/huggingface/download/model.safetensors.index.json.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/content/drive/MyDrive/Day22-DPO-ORPO-TaVanTuan/recovery-models/sft-merged/.cache/huggingface/download/model.safetensors.index.json.metadata",
+      "target": "/content/K4-L3-Track3-Day22-TaVanTuan-2A202602806-DPO-ORPO-Alignment/models/sft-merged/.cache/huggingface/download/model.safetensors.index.json.metadata",
+      "bytes": 101,
+      "sha256": "733f1e4d2f9aa34205ec8962c87a0397a95f3adb013fe3104ee8eb7266a95d3c"
+    },
+    {
+      "source": "/content/drive/MyDrive/Day22-DPO-ORPO-TaVanTuan/recovery-models/sft-merged/.cache/huggingface/download/model-00001-of-00002.safetensors.metadata",
+      "target": "/content/K4-L3-Track3-Day22-TaVanTuan-2A202602806-DPO-ORPO-Alignment/models/sft-merged/.cache/huggingface/download/model-00001-of-00002.safetensors.metadata",
+      "bytes": 125,
+      "sha256": "b9a006da4f2affa4e5c935dc23ca0ea7268b468297bf6c1aa129dd41f3e666d6"
+    },
+    {
+      "source": "/content/drive/MyDrive/Day22-DPO-ORPO-TaVanTuan/recovery-models/sft-merged/.cache/huggingface/download/model-00001-of-00002.safetensors.lock",
+      "target": "/content/K4-L3-Track3-Day22-TaVanTuan-2A202602806-DPO-ORPO-Alignment/models/sft-merged/.cache/huggingface/download/model-00001-of-00002.safetensors.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/content/drive/MyDrive/Day22-DPO-ORPO-TaVanTuan/recovery-models/sft-merged/.cache/huggingface/download/model-00002-of-00002.safetensors.metadata",
+      "target": "/content/K4-L3-Track3-Day22-TaVanTuan-2A202602806-DPO-ORPO-Alignment/models/sft-merged/.cache/huggingface/download/model-00002-of-00002.safetensors.metadata",
+      "bytes": 125,
+      "sha256": "ab62e77c74877230970da0e61debed00f45944433042092d115f2fc20c6c3566"
+    },
+    {
+      "source": "/content/drive/MyDrive/Day22-DPO-ORPO-TaVanTuan/recovery-models/sft-merged/.cache/huggingface/download/model-00002-of-00002.safetensors.lock",
+      "target": "/content/K4-L3-Track3-Day22-TaVanTuan-2A202602806-DPO-ORPO-Alignment/models/sft-merged/.cache/huggingface/download/model-00002-of-00002.safetensors.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/content/drive/MyDrive/Day22-DPO-ORPO-TaVanTuan/recovery-models/sft-merged/.cache/huggingface/download/tokenizer.model.lock",
+      "target": "/content/K4-L3-Track3-Day22-TaVanTuan-2A202602806-DPO-ORPO-Alignment/models/sft-merged/.cache/huggingface/download/tokenizer.model.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/content/drive/MyDrive/Day22-DPO-ORPO-TaVanTuan/recovery-adapters/sft-mini/adapter_model.safetensors",
+      "target": "/content/K4-L3-Track3-Day22-TaVanTuan-2A202602806-DPO-ORPO-Alignment/adapters/sft-mini/adapter_model.safetensors",
+      "bytes": 132187888,
+      "sha256": "168f11625b66f9156b4e74b343a31c14af22df9341e27969d3d1a62094fbe1dd"
+    },
+    {
+      "source": "/content/drive/MyDrive/Day22-DPO-ORPO-TaVanTuan/recovery-adapters/sft-mini/tokenizer.json",
+      "target": "/content/K4-L3-Track3-Day22-TaVanTuan-2A202602806-DPO-ORPO-Alignment/adapters/sft-mini/tokenizer.json",
+      "bytes": 11422924,
+      "sha256": "476870a1f2fb6f6a2759a6ede2383bf9d5d738f17844563b65c91965b722ae09"
+    },
+    {
+      "source": "/content/drive/MyDrive/Day22-DPO-ORPO-TaVanTuan/recovery-adapters/sft-mini/tokenizer_config.json",
+      "target": "/content/K4-L3-Track3-Day22-TaVanTuan-2A202602806-DPO-ORPO-Alignment/adapters/sft-mini/tokenizer_config.json",
+      "bytes": 5131,
+      "sha256": "a47993638e157bd9a5664ed3e98d4c3badc328f9f3a833e328f1c6aaae7eb1fb"
+    },
+    {
+      "source": "/content/drive/MyDrive/Day22-DPO-ORPO-TaVanTuan/recovery-adapters/sft-mini/adapter_config.json",
+      "target": "/content/K4-L3-Track3-Day22-TaVanTuan-2A202602806-DPO-ORPO-Alignment/adapters/sft-mini/adapter_config.json",
+      "bytes": 1339,
+      "sha256": "30976c8304676515c40b93e1c2d77c4757e24d00289affec7199dabf0cea0128"
+    },
+    {
+      "source": "/content/drive/MyDrive/Day22-DPO-ORPO-TaVanTuan/recovery-adapters/sft-mini/README.md",
+      "target": "/content/K4-L3-Track3-Day22-TaVanTuan-2A202602806-DPO-ORPO-Alignment/adapters/sft-mini/README.md",
+      "bytes": 5270,
+      "sha256": "d018dee8619a167ad5cdc4f11affa3cb472dfdf444173216546921b124e0aeac"
+    },
+    {
+      "source": "/content/drive/MyDrive/Day22-DPO-ORPO-TaVanTuan/recovery-adapters/sft-mini/chat_template.jinja",
+      "target": "/content/K4-L3-Track3-Day22-TaVanTuan-2A202602806-DPO-ORPO-Alignment/adapters/sft-mini/chat_template.jinja",
+      "bytes": 4040,
+      "sha256": "40c21f34cf67d8c760ef72f8ad3ae5afad514299d4b06e91dd9a8d705af7b541"
+    },
+    {
+      "source": "/content/drive/MyDrive/Day22-DPO-ORPO-TaVanTuan/recovery-adapters/dpo/adapter_model.safetensors",
+      "target": "/content/K4-L3-Track3-Day22-TaVanTuan-2A202602806-DPO-ORPO-Alignment/adapters/dpo/adapter_model.safetensors",
+      "bytes": 132187888,
+      "sha256": "ed1140c356b839e004c08ffb5d501f9dc8daa3fdff51d581a5f73a5af3dd433a"
+    },
+    {
+      "source": "/content/drive/MyDrive/Day22-DPO-ORPO-TaVanTuan/recovery-adapters/dpo/tokenizer.json",
+      "target": "/content/K4-L3-Track3-Day22-TaVanTuan-2A202602806-DPO-ORPO-Alignment/adapters/dpo/tokenizer.json",
+      "bytes": 11422924,
+      "sha256": "476870a1f2fb6f6a2759a6ede2383bf9d5d738f17844563b65c91965b722ae09"
+    },
+    {
+      "source": "/content/drive/MyDrive/Day22-DPO-ORPO-TaVanTuan/recovery-adapters/dpo/adapter_config.json",
+      "target": "/content/K4-L3-Track3-Day22-TaVanTuan-2A202602806-DPO-ORPO-Alignment/adapters/dpo/adapter_config.json",
+      "bytes": 1378,
+      "sha256": "b60aef35eee07c9a2d586e22e92d2dab3177598f6fbd7b9d8332664d3033e38e"
+    },
+    {
+      "source": "/content/drive/MyDrive/Day22-DPO-ORPO-TaVanTuan/recovery-adapters/dpo/tokenizer_config.json",
+      "target": "/content/K4-L3-Track3-Day22-TaVanTuan-2A202602806-DPO-ORPO-Alignment/adapters/dpo/tokenizer_config.json",
+      "bytes": 5130,
+      "sha256": "ee7322a6042da95693699800174927e37c5d2fe2a279079abbcd9708b9fbb07e"
+    },
+    {
+      "source": "/content/drive/MyDrive/Day22-DPO-ORPO-TaVanTuan/recovery-adapters/dpo/dpo_metrics.json",
+      "target": "/content/K4-L3-Track3-Day22-TaVanTuan-2A202602806-DPO-ORPO-Alignment/adapters/dpo/dpo_metrics.json",
+      "bytes": 811,
+      "sha256": "b40ff63eb7afc959a5803194f48fb81006c8a7cabb36df8750453c4cf73e640b"
+    },
+    {
+      "source": "/content/drive/MyDrive/Day22-DPO-ORPO-TaVanTuan/recovery-adapters/dpo/README.md",
+      "target": "/content/K4-L3-Track3-Day22-TaVanTuan-2A202602806-DPO-ORPO-Alignment/adapters/dpo/README.md",
+      "bytes": 5348,
+      "sha256": "ca229aa8e32842ecac2dd95a15f76abe2cf06a6da8daf19c4d33c10bdc807a10"
+    },
+    {
+      "source": "/content/drive/MyDrive/Day22-DPO-ORPO-TaVanTuan/recovery-adapters/dpo/chat_template.jinja",
+      "target": "/content/K4-L3-Track3-Day22-TaVanTuan-2A202602806-DPO-ORPO-Alignment/adapters/dpo/chat_template.jinja",
+      "bytes": 4040,
+      "sha256": "40c21f34cf67d8c760ef72f8ad3ae5afad514299d4b06e91dd9a8d705af7b541"
+    },
+    {
+      "source": "/content/drive/MyDrive/Day22-DPO-ORPO-TaVanTuan/recovery-adapters/dpo/split.json",
+      "target": "/content/K4-L3-Track3-Day22-TaVanTuan-2A202602806-DPO-ORPO-Alignment/adapters/dpo/split.json",
+      "bytes": 159,
+      "sha256": "965508ac8e1669a3f1b59a77433b1b87467b2d7f7d9ae8a9ff889015e74f0c50"
+    },
+    {
+      "source": "/content/drive/MyDrive/Day22-DPO-ORPO-TaVanTuan/recovery-adapters/dpo/ref/adapter_config.json",
+      "target": "/content/K4-L3-Track3-Day22-TaVanTuan-2A202602806-DPO-ORPO-Alignment/adapters/dpo/ref/adapter_config.json",
+      "bytes": 1378,
+      "sha256": "b60aef35eee07c9a2d586e22e92d2dab3177598f6fbd7b9d8332664d3033e38e"
+    },
+    {
+      "source": "/content/drive/MyDrive/Day22-DPO-ORPO-TaVanTuan/recovery-adapters/dpo/ref/adapter_model.safetensors",
+      "target": "/content/K4-L3-Track3-Day22-TaVanTuan-2A202602806-DPO-ORPO-Alignment/adapters/dpo/ref/adapter_model.safetensors",
+      "bytes": 132187888,
+      "sha256": "fabe085c7fc4809f208170b89fdf3d9123f073eede78124686958042aca3da53"
+    }
+  ]
+}

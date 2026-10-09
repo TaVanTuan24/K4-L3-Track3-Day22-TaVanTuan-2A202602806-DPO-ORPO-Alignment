@@ -1,0 +1,11 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "scripts/build_colab.py",
+    "--check"
+  ],
+  "exit_code": 0,
+  "seconds": 0.06598925590515137,
+  "utc": "2026-10-09T08:10:29.933961+00:00",
+  "runtime": "Colab CPU follow-up"
+}

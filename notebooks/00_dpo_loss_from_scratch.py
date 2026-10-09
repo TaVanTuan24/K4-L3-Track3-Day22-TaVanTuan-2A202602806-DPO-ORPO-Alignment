@@ -201,7 +201,7 @@ print(f"ORPO  {M.orpo_loss(avg_c, avg_r, -avg_c).item():.4f}")
 #
 # Loss chỉ phụ thuộc **hiệu** hai reward ngầm định:
 # `L = −logsigmoid(β·[(pc − rc) − (pr − rr)])`. Vì vậy đạo hàm theo margin là
-# `−sigmoid(−β·margin)`: mục tiêu **không** có thành phần nào thưởng cho việc nâng
+# `−β·sigmoid(−β·margin) (margin chưa nhân β)`: mục tiêu **không** có thành phần nào thưởng cho việc nâng
 # `log π(chosen)` lên một cách tuyệt đối. Nó chỉ cần margin dương, và margin có thể
 # tăng bằng hai con đường hoàn toàn khác nhau. Kết quả thật ở §5:
 #
@@ -218,18 +218,17 @@ print(f"ORPO  {M.orpo_loss(avg_c, avg_r, -avg_c).item():.4f}")
 # nhìn margin tăng là không đủ để kết luận mô hình tốt lên. RPO sửa bằng cách cộng thêm
 # NLL của chosen: ở §5, RPO cho A = 2.027 < B = 2.427, tức nó **phạt** đúng kịch bản B.
 #
-# ### 7.2 Vì sao DPO gốc thiên vị độ dài, và SimPO/ORPO sửa thế nào?
+# ### 7.2 Vì sao DPO gốc có thể thiên vị độ dài, và SimPO/ORPO xử lý thế nào?
 #
-# `log π(y|x) = Σ_t log π(y_t | x, y_<t)` là một **tổng** theo token, nên mỗi token thêm
-# vào đóng góp một số hạng âm. Câu dài hơn vì thế luôn có tổng log-prob âm hơn câu ngắn,
-# bất kể chất lượng. DPO so *tổng* của chosen với *tổng* của rejected, nên nếu trong dữ
-# liệu `chosen` thường dài hơn `rejected` (NB2 đo tỉ lệ này), mô hình học được quy tắc
-# "viết dài thì được điểm" thay vì "viết hay hơn". Cách sửa là **chuẩn hoá theo độ dài**:
-# chia log-ratio cho số token hoàn thành để margin trở thành *trung bình trên token*.
-# IPO và SimPO làm đúng vậy; SimPO còn bỏ hẳn mô hình tham chiếu và thêm margin γ, còn
-# ORPO dùng log-odds của log-prob trung bình cộng với NLL của chosen. Ở §6, cùng một cặp
-# (chosen 40 token, rejected 120 token) cho DPO **0.5130** trên tổng chưa chuẩn hoá, còn
-# các biến thể chuẩn hoá cho các giá trị khác hẳn về thang đo: SimPO 1.1256, ORPO 1.2783.
-# Vì `β` chỉ có ý nghĩa nhất quán khi margin được chuẩn hoá, cùng một `β` sẽ tác động
-# rất khác nhau lên câu ngắn và câu dài nếu ta dùng DPO gốc.
-
+# `log π(y|x) = Σ_t log π(y_t | x, y_<t)` là tổng theo token. Khi kéo dài
+# cùng một chuỗi, tổng log-prob giảm; giữa hai chuỗi khác nhau, độ dài không tự
+# quyết định thứ tự vì xác suất từng token cũng khác. DPO dùng log-ratio với
+# reference nên không tất yếu thưởng cho câu dài. Tuy nhiên, nhãn chosen tương
+# quan với độ dài có thể khiến mô hình học đặc điểm này thay cho chất lượng.
+# Một cách giảm ảnh hưởng của tổng theo token là chuẩn hoá theo độ dài:
+# IPO chia mỗi log-ratio theo số token, SimPO dùng log-prob trung bình và margin γ
+# không cần reference; ORPO dùng log-odds của log-prob trung bình cộng NLL chosen.
+# Ở §6, cùng cặp chosen 40 token / rejected 120 token cho DPO 0.5130,
+# SimPO 1.1256 và ORPO 1.2783. Đây là các thang loss khác nhau, không phải
+# bảng xếp hạng chất lượng. β vẫn có ý nghĩa trong DPO gốc, nhưng tổng và trung
+# bình log-ratio có thang đo khác nhau; không dùng cùng β để khẳng định tương đương.

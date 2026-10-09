@@ -1,0 +1,75 @@
+[colab] Day 22 lab — Colab setup
+[colab] Stack: unsloth + trl + peft + bitsandbytes + llama-cpp-python
+
+[colab] Detected tier: T4
+[colab] T4 (or similar 16 GB) tier — using Qwen3-4B-Instruct-2507
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 82.4/82.4 kB 25.7 kB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 76.6/76.6 MB 4.2 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.1/64.1 kB 2.8 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 981.5/981.5 kB 38.1 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 28.4/28.4 MB 21.0 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 4.5 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.3/12.3 MB 50.3 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.1/43.1 MB 13.8 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.1/9.1 MB 44.2 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 17.2/17.2 MB 75.7 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 57.2 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 144.2/144.2 kB 4.4 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.5/45.5 kB 1.8 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 84.1/84.1 kB 3.6 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 947.5/947.5 kB 29.9 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 77.5/77.5 kB 5.7 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.2/60.2 kB 3.0 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.8/100.8 kB 7.0 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.8/73.8 kB 3.6 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 33.9 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 38.7 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.6/3.6 MB 46.1 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 209.1/209.1 kB 8.3 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.1/91.1 kB 7.6 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 216.9/216.9 kB 21.1 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.4/3.4 MB 35.4 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 230.5/230.5 kB 16.3 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.6/129.6 kB 11.3 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.9/4.9 MB 76.2 MB/s eta 0:00:00
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+omegaconf 2.3.1 requires antlr4-python3-runtime==4.9.*, but you have antlr4-python3-runtime 4.11.0 which is incompatible.
+[jupytext] Reading notebooks/00_dpo_loss_from_scratch.py in format py
+[jupytext] Warning: Notebook is not trusted
+[jupytext] Unchanged notebooks/00_dpo_loss_from_scratch.ipynb
+[jupytext] Reading notebooks/01_sft_mini.py in format py
+[jupytext] Warning: Notebook is not trusted
+[jupytext] Unchanged notebooks/01_sft_mini.ipynb
+[jupytext] Reading notebooks/02_preference_data.py in format py
+[jupytext] Warning: Notebook is not trusted
+[jupytext] Unchanged notebooks/02_preference_data.ipynb
+[jupytext] Reading notebooks/03b_dpo_variants.py in format py
+[jupytext] Unchanged notebooks/03b_dpo_variants.ipynb
+[jupytext] Reading notebooks/03_dpo_train.py in format py
+[jupytext] Warning: Notebook is not trusted
+[jupytext] Unchanged notebooks/03_dpo_train.ipynb
+[jupytext] Reading notebooks/04_compare_and_eval.py in format py
+[jupytext] Warning: Notebook is not trusted
+[jupytext] Unchanged notebooks/04_compare_and_eval.ipynb
+[jupytext] Reading notebooks/05_merge_deploy_gguf.py in format py
+[jupytext] Unchanged notebooks/05_merge_deploy_gguf.ipynb
+[jupytext] Reading notebooks/06_benchmark.py in format py
+[jupytext] Unchanged notebooks/06_benchmark.ipynb
+[jupytext] Reading notebooks/07_grpo_bonus.py in format py
+[jupytext] Unchanged notebooks/07_grpo_bonus.ipynb
+
+[colab] Done — tier = T4.
+
+In Colab, you can now either:
+
+    1. Open notebooks/01_sft_mini.py — Jupytext will convert on first edit
+    2. Or run the stitched single-file Colab notebook:
+         - T4 tier:     colab/Lab22_DPO_T4.ipynb
+         - BigGPU tier: colab/Lab22_DPO_BigGPU.ipynb
+    3. Or use the make targets:
+
+         !make smoke           # quick verification
+         !make pipeline        # core NB0-NB4 (~60 min T4 / ~30 min A100)
+
+Tip: read VIBE-CODING.md before starting NB1.
+

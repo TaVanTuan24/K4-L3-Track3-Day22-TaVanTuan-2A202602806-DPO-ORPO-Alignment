@@ -1,0 +1,24 @@
+FF                                                                       [100%]
+=================================== FAILURES ===================================
+_____________________ test_means_are_distinct_from_medians _____________________
+
+    def test_means_are_distinct_from_medians():
+        stats=D.length_stats([row("a","abcdef"),row("ab","abc"),row("abcdefghi","abc")])
+>       assert stats["chosen_mean"]==pytest.approx(4.0)
+               ^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'chosen_mean'
+
+scripts/test_submission_stats.py:10: KeyError
+____________________ test_means_use_supplied_token_counter _____________________
+
+    def test_means_use_supplied_token_counter():
+        stats=D.length_stats([row("a","a b c d e f"),row("b c","g h i"),row("d e f g h i j k l","j k l")],count=lambda text:len(text.split()))
+>       assert stats["chosen_mean"]==pytest.approx(4.0)
+               ^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'chosen_mean'
+
+scripts/test_submission_stats.py:18: KeyError
+=========================== short test summary info ============================
+FAILED scripts/test_submission_stats.py::test_means_are_distinct_from_medians
+FAILED scripts/test_submission_stats.py::test_means_use_supplied_token_counter
+2 failed in 0.21s

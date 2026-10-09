@@ -1,0 +1,10 @@
+{
+  "command": [
+    "make",
+    "verify"
+  ],
+  "exit_code": 0,
+  "seconds": 0.09510993957519531,
+  "utc": "2026-10-09T08:10:29.867528+00:00",
+  "runtime": "Colab CPU follow-up"
+}

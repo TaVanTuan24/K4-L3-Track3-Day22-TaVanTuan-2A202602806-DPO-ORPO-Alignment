@@ -1,0 +1,13 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-m",
+    "pytest",
+    "-q",
+    "scripts/test_submission_stats.py"
+  ],
+  "exit_code": 1,
+  "seconds": 4.480119943618774,
+  "utc": "2026-10-09T07:49:52.632088+00:00",
+  "runtime": "Colab CPU follow-up"
+}

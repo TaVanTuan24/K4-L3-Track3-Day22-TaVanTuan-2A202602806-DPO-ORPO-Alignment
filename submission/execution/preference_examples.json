@@ -1,0 +1,71 @@
+[
+  {
+    "prompt": [
+      {
+        "content": "Tạo 10 yêu cầu thay đổi.\n\n--- ví dụ ---\nTrước: Một cô gái cưỡi ngựa\nYêu cầu: Biến cô ấy thành cưỡi kỳ lân\nSau: Một cô gái cưỡi kỳ lân\n--- kết thúc ví dụ ---",
+        "role": "user"
+      }
+    ],
+    "chosen": [
+      {
+        "content": "**10 Yêu cầu Thay đổi:**\n\n1. **Trước:** Một thị trấn xưa với xe ngựa\n**Yêu cầu:** Biến phương tiện giao thông thành xe bay\n**Sau:** Một thị trấn cổ với xe bay lơ lửng\n\n2. **Trước:** Bữa trà chiều truyền thống trong một ngôi nhà nông thôn\n**Yêu cầu:** Thêm các yếu tố tương lai (robot phục vụ, đồ nội thất tự thích nghi)\n**Sau:** Bữa trà \"cyber-chic\" với công nghệ tiên tiến\n\n3. **Trước:** Một nhà thám hiểm trong rừng\n**Yêu cầu:** Trao cho anh ta khả năng giao tiếp với thực vật\n**Sau:** Nhà thám hiểm sinh thái giao tiếp với rừng rậm\n\n4. **Trước:** Cảnh bãi biển mùa hè cổ điển\n**Yêu cầu:** Thêm các cấu trúc bãi biển dưới nước đa dạng sinh học\n**Sau:** Bãi biển đầy năng lượng tự duy trì với rạn san hô tinh tế\n\n5. **Trước:** Thư viện sách truyền thống\n**Yêu cầu:** Chuyển đổi nó thành thư viện thực tế ảo tương tác\n**Sau:** Thư viện sống động với các lớp thực tế ảo, tài nguyên kỹ thuật số\n\n6. **Trước:** Đầu bếp chuẩn bị một món ăn cổ điển\n**Yêu cầu:** Kết hợp thành phần siêu thực (như hoa cay) một cách tinh tế\n**Sau:** Thực nghiệm ẩm thực với các thành phần thử nghiệm nâng cao hương vị cổ điển\n\n7. **Trước:** Thành phố thời trung cổ với những con đường sỏi\n**Yêu cầu:** Thắp sáng các tòa nhà bằng ánh sáng ma thuật huyền bí\n**Sau:** Thành phố ma thuật, nơi kiến trúc và ánh sáng hội tụ\n\n8. **Trước:** Phòng thí nghiệm khoa học với thiết bị cổ điển\n**Yêu cầu:** Cập nhật bằng các vật liệu nano thông minh và giao diện cảm ứng\n**Sau:** Phòng thí nghiệm tiên tiến nơi đổi mới hội tụ với công nghệ hữu cơ\n\n9. **Trước:** Một đồng cỏ rộng với bầy cừu\n**Yêu cầu:** Thêm những sinh vật đồng cỏ biết nói, thảo luận thông minh\n**Sau:** Thiên nhiên sống động với đàn cừu giao tiếp hòa nhập với môi trường\n\n10. **Trước:** Quán cà phê cổ xưa với bảng đen phấn\n**Yêu cầu:** Tích hợp thực tế tăng cường, biến lời nhắn của khách hàng thành đồ họa tức thời\n**Sau:** Quán cà phê sáng tạo với giao diện AR động, nâng cao trải nghiệm của khách hàng\n\nNhững yêu cầu biến đổi này pha trộn cái cũ với cái mới, mở ra những phiên bản đổi mới và quyến rũ của các bối cảnh quen thuộc.",
+        "role": "assistant"
+      }
+    ],
+    "rejected": [
+      {
+        "content": "**Yêu cầu 10 thay đổi sáng tạo:**\n\n1. **Trước:** Một thư viện cổ xưa.\n**Thay đổi:** Thêm cửa nhập cảnh ẩn dẫn đến một thư viện ma thuật.\n**Sau:** Một thư viện cổ đầy cánh cổng ma thuật.\n\n2. **Trước:** Thành phố công nghệ tương lai.\n**Thay đổi:** Tích hợp các công viên xanh treo đô thị.\n**Sau:** Thành phố công nghệ xanh với không gian tự nhiên lơ lửng.\n\n3. **Trước:** Nhà bếp truyền thống.\n**Thay đổi:** Kết hợp các yếu tố bếp đa chức năng, bền vững.\n**Sau:** Một nhà bếp tối giản, thân thiện với môi trường đầy đổi mới.\n\n4. **Trước:** Rừng nhiệt đới rậm rạp.\n**Yêu cầu thay đổi:** Khám phá những con đường ánh sáng tự nhiên xuyên qua cây.\n**Sau:** Rừng nhiệt đới lấp lánh với ánh sáng xanh thực vật.\n\n5. **Trước:** Một nhà biểu diễn lịch sử.\n**Thay đổi:** Kết hợp các màn trình diễn ảo tăng cường.\n**Sau:** Nhà hát tương tác với lớp phủ kỹ thuật số hấp dẫn.\n\n6. **Trước:** Thị trấn nhỏ ven biển.\n**Thay đổi:** Tạo ra những bến cảng nổi, thân thiện với khí hậu.\n**Sau:** Thuộc địa bờ biển bền vững với cơ sở hạ tầng nổi.\n\n7. **Trước:** Phòng thí nghiệm khoa học.\n**Yêu cầu thay đổi:** Nhúng các yếu tố AR thực tế tăng tốc học tập.\n**Sau:** Phòng thí nghiệm trải nghiệm, tương tác đa giác quan.\n\n**Trước:** Khu vườn thảo mộc ngoài trời.\n**Thay đổi:** Tích hợp tính năng vi khí hậu trong nhà kính di động.\n**Sau:** Khu vườn thảo mộc thích ứng với khí hậu linh hoạt.\n\n**Trước:** Bảo tàng khảo cổ.\n**Yêu cầu thay đổi:** Giới thiệu bảo tàng tăng cường, kể chuyện 3D.\n**Sau:** Một bảo tàng khảo cổ sống động với chuyến du lịch thời gian ảo.\n\n10. **Trước:** Bãi đất hoang ở thành phố.\n**Thay đổi:** Chuyển đổi nó thành một \"rừng đô thị\" xanh thẳng đứng.\n**Sau:** Một ốc đảo đô thị rực rỡ với các vách xanh và sinh cảnh đa dạng.\n\nNhững yêu cầu thay đổi này biến đổi các khung cảnh quen thuộc thành những trải nghiệm sáng tạo, tương lai và đắm chìm, nhấn mạnh tính bền vững, đổi mới và giao diện liên ngành.",
+        "role": "assistant"
+      }
+    ],
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    }
+  },
+  {
+    "prompt": [
+      {
+        "content": "Trong nhiệm vụ này, bạn nhận được một bài đăng mang tính thù địch bằng tiếng Tây Ban Nha từ các trang mạng trực tuyến. Bạn được yêu cầu phân loại bài đăng này vào một trong hai loại: hung hăng hoặc không hung hăng. Một bài viết được coi là hung hăng khi nó thể hiện cảm xúc và ý kiến theo cách bạo hành và cố gắng áp đảo người khác. Lưu ý rằng các URL trong văn bản đã được thay thế bằng [Link].\n\nĐầu vào: Xem xét đầu vào: Bài đăng: @AgathaBribli Te lo mereces, por usar uñas de GUARRA\n\nPhản hồi: Hung hăng\n\n\nĐầu vào: Xem xét đầu vào: Bài đăng: Eliminar el cáncer del top manta subsahariano en #Barcelona con 3 medidas de oro: 1) detener a \"sindicatos\" de delincuentes que encima van por ahí como interlocutores, 2) repatriaciones masivas a África, 3) cierre y repatriaciones masivas de chinos proveedores.\n\nPhản hồi: Hung hăng\n\n\nĐầu vào: Xem xét đầu vào: Bài đăng: @vickkysanchezz Cállate tu puta zorra 😒👅",
+        "role": "user"
+      }
+    ],
+    "chosen": [
+      {
+        "content": "Phản ứng: Thô bạo",
+        "role": "assistant"
+      }
+    ],
+    "rejected": [
+      {
+        "content": "Phản ứng: Bạo lực",
+        "role": "assistant"
+      }
+    ],
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    }
+  },
+  {
+    "prompt": [
+      {
+        "content": "Nhà / Giáo dục / Sức khỏe Giọng hát và Giáo dục / Đánh giá Giọng nói Miễn phí - Đăng ký Làm Thành viên!\nMột phần của lịch để đặt hẹn.\nHướng dẫn cách điền vào biểu mẫu hiện ra trên biểu mẫu.\nLiên hệ education@barbershop.org với bất kỳ câu hỏi nào.\nBạn có thể vui lòng giúp tôi đặt lịch hẹn để Đánh giá Giọng nói Miễn phí được không? Những bước nào tôi cần làm theo?",
+        "role": "user"
+      }
+    ],
+    "chosen": [
+      {
+        "content": "**Hướng dẫn Đặt Cuộc đánh giá Giọng nói Miễn phí:**\n\n***Bước 1: Truy cập lịch của bạn**  \nĐi đến trang web chính thức hoặc truy cập nguồn lịch được cung cấp bởi Sức khỏe Giọng hát và Giáo dục (Barbershop).\n\n***Bước 2: Đặt ngày / thời gian**  \n1. **Chọn ngày**: Tìm một khoảng trống có sẵn cho \"Free Voice Assessment\" trong lịch. 2. **Chọn một khung thời gian**: Nhấp vào ô trống phù hợp với sự thuận tiện của bạn.\n\n***Bước 3: Điền Biểu mẫu Đăng ký**  \nSau khi chọn lịch hẹn:\n\n1. **Mở biểu mẫu** - Bạn sẽ được chuyển hướng đến một biểu mẫu trực tuyến (mẫu pop-up).\n2. **Nhập thông tin cần thiết**:\n   - **Tên đầy đủ**\n   - **Email**\n   - **Số điện thoại**\n   - **Thông tin liên quan** (ví dụ: Lịch sử hát, mục tiêu, bất kỳ mối quan tâm nào)\n\n***Bước 4: Xác nhận và Gửi**  \n1. **Kiểm tra** các thông tin để đảm bảo tính chính xác.\n2. **Nhấp vào \"Gửi\"** để hoàn thành việc đăng ký của bạn.\n\n***Thông tin Liên lạc và Theo dõi**  \n- **Nhận lời xác nhận**: Bạn sẽ nhận được một email xác nhận có chi tiết cuộc hẹn.\n- **Liên hệ nếu cần thiết**: Lưu giữ địa chỉ email: **education@barbershop.org** cho các câu hỏi, cập nhật, hoặc hỗ trợ bổ sung.\n\n**Thông báo cuối cùng:**\nBạn đã thành công đặt một Free Voice Assessment! Hãy tuân thủ lời nhắc nhở, chuẩn bị sẵn sàng, và tận hưởng trải nghiệm giáo dục và nâng cao giọng hát của bạn.\n\n**Hãy hát vui vẻ!** Nếu bạn gặp bất kỳ vấn đề nào, đừng ngần ngại liên lạc với nhóm hỗ trợ. Chúc các buổi đánh giá thành công!",
+        "role": "assistant"
+      }
+    ],
+    "rejected": [
+      {
+        "content": "**Hướng dẫn Đặt hẹn cho Đánh giá Giọng hát Miễn phí:**\n\n**Bước 1: Truy cập Lịch hẹn**\n1. Đi đến [Barbershop Harmony Society (BHS)](https://www.barbershop.org/education/vocal-assessments) trang sức khỏe giọng hát / Đánh giá giọng hát miễn phí.\n2. Tìm lịch trực tuyến đặc biệt dành cho Đánh giá Giọng hát được ủy quyền (AVAR).\n\n**Bước 2: Chọn một ngày và Giờ**\n3. Cuộn qua lịch và chọn một ngày/trung tâm AVAR thuận tiện.\n4. Lựa chọn **trống** thời gian từ các khả dụng được hiển thị (với giáo dục viên xác định).\n\n**Bước 3: Điền Mẫu Đăng ký**\n\n1. **Nhấp vào** thời gian bạn chọn, và một biểu mẫu sẽ xuất hiện.\n2. **Hãy cung cấp thông tin sau:**\n   - Họ tên đầy đủ\n   - Địa chỉ email\n   - Số điện thoại\n   - Nền âm nhạc và kinh nghiệm liên quan\n3. Đảm bảo thông tin của bạn là chính xác và cập nhật.\n\n**Bước 4: Xác nhận và Hoàn thành**\n\n4. Kiểm tra lại chi tiết hẹn của bạn.\n5. **Gửi biểu mẫu**: Nhấn \"Submit\" hoặc \"Schedule Appointment\" để đặt hẹn của bạn.\n\n**Xác nhận và Chuẩn bị**\n\n1. **Kiểm tra email của bạn**: Bạn sẽ nhận được xác nhận từ BHS kèm theo hướng dẫn cụ thể và liên hệ với giáo dục viên.\n2. **Theo ngày**: Chuẩn bị cho buổi đánh giá giọng hát miễn phí, mang theo bất kỳ tài liệu cần thiết nào (văn bản, ghi chú âm thanh).\n\n**Hỗ trợ thêm?**\n\n* Nếu bạn gặp bất kỳ sự nhầm lẫn hoặc cần hỗ trợ, liên hệ với **education@barbershop.org** với câu hỏi của bạn.\n\n**Chúc mừng!** Bạn đã thành công đặt hẹn Đánh giá Giọng nói Miễn phí. Phát triển kỹ năng hát của bạn và tối đa hóa trải nghiệm với sự hướng dẫn của một AVAR có uy tín! Hãy tận hưởng hành trình giáo dục giọng hát của bạn với Barbershop Harmony Society.",
+        "role": "assistant"
+      }
+    ],
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    }
+  }
+]

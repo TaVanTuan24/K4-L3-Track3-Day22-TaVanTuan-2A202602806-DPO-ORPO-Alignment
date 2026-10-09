@@ -1,0 +1,24 @@
+{
+  "execution": "EXECUTED / VERIFIED",
+  "publication": "NOT PUBLISHED; no Colab GitHub credential",
+  "gpu_bonus": "NOT RUN / BLOCKED GPU quota",
+  "original_pipeline_exit_code": null,
+  "notebook_code_cells": {
+    "00_dpo_loss_from_scratch": 10,
+    "01_sft_mini": 7,
+    "02_preference_data": 5,
+    "03_dpo_train": 6,
+    "04_compare_and_eval": 5
+  },
+  "reflection_word_counts": {
+    "3": 464,
+    "6": 496
+  },
+  "test_exit_code": 0,
+  "verify_exit_code": 0,
+  "build_colab_check_exit_code": 0,
+  "weights_restore_verified": true,
+  "test_count": 57,
+  "old_remote_sha": "4d38b3092b2321281ad12ab391681e5a0a1496c9",
+  "preserved_experiment_commit": "eee66b5a2fe429b1ba4de6c5c5ee82a762a75b7d"
+}

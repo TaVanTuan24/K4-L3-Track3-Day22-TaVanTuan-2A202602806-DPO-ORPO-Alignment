@@ -1,0 +1,20 @@
+==> Smoke check (imports, GPU, sources)
+
+  ✓ torch 2.11.0+cu130
+  ✓ CUDA Tesla T4 (15.6 GB)
+🦥 Unsloth: Will patch your computer to enable 2x faster free finetuning.
+🦥 Unsloth Zoo will now patch everything to make training faster!
+  ✓ unsloth 2026.10.3
+  ✓ trl 1.13.0
+  ✓ transformers 5.17.0
+  ✓ peft 0.21.1
+  ✓ bitsandbytes 0.50.2
+  ✓ datasets 4.8.5
+  ✓ lm_eval 0.4.13
+  ✓ matplotlib 3.10.0
+
+COMPUTE_TIER=T4 base=unsloth/Qwen3-4B-Instruct-2507-unsloth-bnb-4bit max_len=768 seed=42
+SFT saillab/alpaca-vietnamese-cleaned[:1000]  PREF sailor2/sea-ultrafeedback-onpolicy (Vietnamese) train=800 eval=100
+DPO beta=0.1 lr=5e-06 epochs=1.0 loss=['sigmoid']
+
+✓ Smoke check passed. Next: `make pipeline`.

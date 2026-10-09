@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-m",
+    "pytest",
+    "-q",
+    "scripts/test_submission_stats.py",
+    "-k",
+    "student_dpo"
+  ],
+  "exit_code": 1,
+  "seconds": 10.852046728134155,
+  "utc": "2026-10-09T08:13:02.382195+00:00",
+  "runtime": "Colab CPU follow-up"
+}

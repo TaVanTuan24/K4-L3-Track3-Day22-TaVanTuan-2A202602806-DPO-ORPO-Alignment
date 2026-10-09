@@ -1,0 +1,18 @@
+{
+  "restored_from": "/content/drive/MyDrive/Day22-DPO-ORPO-TaVanTuan",
+  "verified_sft_sha256": true,
+  "adapters": [
+    {
+      "adapter": "sft-mini",
+      "bytes": 132187888,
+      "sha256": "168f11625b66f9156b4e74b343a31c14af22df9341e27969d3d1a62094fbe1dd"
+    },
+    {
+      "adapter": "dpo",
+      "bytes": 132187888,
+      "sha256": "ed1140c356b839e004c08ffb5d501f9dc8daa3fdff51d581a5f73a5af3dd433a"
+    }
+  ],
+  "seconds": 299.41941928863525,
+  "utc": "2026-10-09T02:44:42.958315+00:00"
+}

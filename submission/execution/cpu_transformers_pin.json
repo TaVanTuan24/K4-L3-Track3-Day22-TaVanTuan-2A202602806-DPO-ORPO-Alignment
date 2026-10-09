@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-m",
+    "pip",
+    "install",
+    "--quiet",
+    "transformers==5.17.0"
+  ],
+  "exit_code": 0,
+  "seconds": 79.04183673858643,
+  "utc": "2026-10-09T07:56:27.149199+00:00",
+  "runtime": "Colab CPU follow-up"
+}

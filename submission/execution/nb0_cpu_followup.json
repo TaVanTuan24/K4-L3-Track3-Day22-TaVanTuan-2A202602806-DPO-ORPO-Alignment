@@ -1,0 +1,10 @@
+{
+  "command": [
+    "make",
+    "nb0"
+  ],
+  "exit_code": 0,
+  "seconds": 37.78791689872742,
+  "utc": "2026-10-09T08:01:43.419352+00:00",
+  "runtime": "Colab CPU follow-up"
+}

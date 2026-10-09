@@ -84,6 +84,7 @@ for i in range(3):
 
 # %%
 stats = D.length_stats(list(train_ds), count=n_tokens)
+print(f"chosen mean {stats['chosen_mean']:.2f} tok · rejected mean {stats['rejected_mean']:.2f} tok")
 print(f"chosen median {stats['chosen_median']:.0f} tok · rejected median {stats['rejected_median']:.0f} tok")
 print(f"chosen longer in {stats['chosen_longer_frac']:.1%} of pairs")
 

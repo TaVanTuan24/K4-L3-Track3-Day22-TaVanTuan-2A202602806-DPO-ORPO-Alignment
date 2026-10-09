@@ -1,0 +1,19 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+____ test_student_dpo_loss_matches_reference_and_preserves_policy_gradients ____
+
+    def test_student_dpo_loss_matches_reference_and_preserves_policy_gradients():
+        import ast
+        from pathlib import Path
+        import torch
+        from lab22 import dpo_math as M
+        source=Path(__file__).resolve().parent.parent/'notebooks/00_dpo_loss_from_scratch.py'
+        tree=ast.parse(source.read_text())
+>       func=next(node for node in tree.body if isinstance(node,ast.FunctionDef) and node.name=="my_dpo_loss")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       StopIteration
+
+scripts/test_submission_stats.py:31: StopIteration
+=========================== short test summary info ============================
+FAILED scripts/test_submission_stats.py::test_student_dpo_loss_matches_reference_and_preserves_policy_gradients
+1 failed, 2 deselected in 4.58s
